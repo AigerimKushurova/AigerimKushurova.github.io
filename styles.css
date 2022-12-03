@@ -1,0 +1,284 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #FBEDE0;
+  display: block;
+  font-family: Optima;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: #D0AB99;
+  z-index: 2;
+}
+
+.a-nav {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14pt;
+  border-bottom: 3px solid white;
+}
+
+.a-nav:hover {
+  color: black;
+  background-color: white;
+}
+
+#me {
+  color: red;
+}
+
+.nav-set {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.banner {
+  text-align: center;
+  color:  white;
+  font-size: 2em ;
+  font-family: Baskerville;
+  background-image: url("images/banner_back.jpg");
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -3% -2% 0 -2%;
+  vertical-align: middle;
+  transition: width 2s, height 2s;
+  float: left;
+}
+/*img transition*/
+.banner:hover {
+  height: 83vh;
+  font-size: 2.2em ;
+}
+
+.ban_p{
+  padding-top: 30vh;
+  padding-left: 10%;
+  padding-right: 37%;
+}
+.me{
+  max-width: 25%;
+  float: right;
+  margin-top: -45vh;
+  margin-right: 10%;
+  transition: width 2s, height 2s;
+}
+
+.me:hover {
+  max-width: 27%;
+  margin-right: 8%;
+}
+
+li {
+  list-style-type: circle;
+  align-items: center;
+  padding-right: 3%;
+  align-items: center;
+  height: 100%;
+}
+.checkbox {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
+}
+.hamburger-icon {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  cursor: pointer;
+}
+
+/** MAIN **/
+main {
+  margin-top: 15vh;
+  padding: 20px;
+  z-index: -1;
+}
+
+/*** CSS Grids ***/
+.work{
+  margin-top: 60vh;
+  background-size: 50%;
+}
+
+h1 {
+  text-align: center;
+  background-image: url("images/brush.png");
+  background-size: 30%;
+  height: 5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 3.5em;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  margin-top: -7%;
+}
+
+h3,h4,h5 {
+  font-family: Optima;
+}
+
+h3{
+  font-size: 1.7em;
+  text-decoration: underline;
+  color: #4A3C36;
+
+}
+h4{
+  color: #A265D6;
+  font-size: 1.5em;
+  margin-bottom: -0.5%;
+  margin-top: -0.5%;
+
+}
+h5{
+ font-size: 1.3em;
+ margin-top: -0.5%;
+}
+
+.first_edu, .second_edu{
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.nis{
+  flex: 30%;
+}
+.nis > img {
+  max-width: 70%;
+  padding-top: 10%;
+  padding-left: 30%;
+}
+.school{
+  flex: 70%;
+  padding-left: 5%;
+}
+.school > p {
+  font-size: 1.2em;
+}
+.first, .second {
+  padding: 3%;
+  margin: 3%;
+  margin-top: 5%;
+  font-size: 1.1em;
+}
+.first{ 
+  padding-left: 5%;
+  margin-bottom: -2%;
+}
+
+.first > h3{text-align: center;}
+
+.skills
+{  background-color: #FAE7E8;}
+
+#left_topic {font-weight: bold; font-size: 1.3em; padding-top: 5%;}
+.date{
+  display: inline-block;
+  color: #C16A6F;
+  margin: 0;
+}
+
+
+
+#social{
+  display:  flex;
+  flex-direction: row;
+  background-color: #2196F3;
+  padding: 10px;
+  text-align: center;
+}
+
+#social > div {
+  background-color: yellow;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-color: black;
+}
+
+.V1{flex: 20%}
+.V2{flex: 20%}
+.V3{flex: 20%}
+.V4{flex: 20%}
+.V5{flex: 20%}
+
+/* FOOTER */
+footer {
+  position: sticky;
+  top: 100vh;
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 50px 50px 50px auto;
+
+  color: white;
+  background-color: yellow;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.follow {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+}
+.fb {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.insta {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.git {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+footer a {
+  color: white;
+}
+/*******************************/
+
+
+
+
+
+
