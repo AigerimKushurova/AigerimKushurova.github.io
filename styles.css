@@ -9,14 +9,6 @@ body {
   font-family: Optima;
 }
 
-#logo {
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
 
 nav {
   position: fixed;
@@ -32,22 +24,49 @@ nav {
   z-index: 2;
 }
 
-.a-nav {
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 14pt;
-  border-bottom: 3px solid white;
+
+
+
+#mymenu{
+  padding-top: -2%; 
+  padding-bottom: -5%;
+  width: 100%;
+  height: 2vh;
 }
 
-.a-nav:hover {
-  color: black;
-  background-color: white;
+#mymenu ul {
+   list-style: horizontal;
+   text-align: center;
+   padding: 0;
+   margin: 0;
+   border: 5% ;
+   border color: black;
+}
+#mymenu li {
+  font-family: American Typewriter;
+  display: inline-block;
+  width: 10%;
+  border-bottom: none;
+  line-height: 50%;
+  font-size: 1em; 
+  font-weight: normal;
 }
 
-#me {
-  color: red;
+#mymenu a {
+   text-decoration: none;
+   color: black;
+   display: block;
 }
+#mymenu ul li a:visited{
+color: black;}
+
+#mymenu ul li a:hover, #mymenu ul li a#selected{ 
+color: lightyellow;
+
+}
+
+
+
 
 .nav-set {
   margin: 0;
@@ -66,7 +85,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin: -3% -2% 0 -2%;
+  margin: -2% -2% 0 -2%;
   vertical-align: middle;
   transition: width 2s, height 2s;
   float: left;
@@ -78,14 +97,15 @@ nav {
 }
 
 .ban_p{
-  padding-top: 30vh;
+  padding-top: 25vh;
   padding-left: 10%;
   padding-right: 37%;
 }
+
 .me{
   max-width: 25%;
   float: right;
-  margin-top: -45vh;
+  margin-top: -50vh;
   margin-right: 10%;
   transition: width 2s, height 2s;
 }
@@ -137,12 +157,13 @@ h1 {
   height: 5%;
   background-position: center;
   background-repeat: no-repeat;
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
   z-index: 1;
   width: 100%;
   margin: 0;
   margin-top: -7%;
+  margin-bottom: 2%;
 }
 
 h3,h4,h5 {
@@ -194,7 +215,7 @@ h5{
   padding: 3%;
   margin: 3%;
   margin-top: 5%;
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 .first{ 
   padding-left: 5%;
@@ -215,18 +236,19 @@ h5{
 
 
 
-#social{
+#sociall{
   display:  flex;
   flex-direction: row;
-  background-color: #2196F3;
-  padding: 10px;
+  background-color: #D4BBDD;
+  padding: 2% 10% 0 10%;
   text-align: center;
+  margin-right: -5%;
+  margin-left: -5%;
 }
 
-#social > div {
-  background-color: yellow;
+#sociall > div {
   text-align: center;
-  padding: 20px 0;
+  padding: 1.5% 2% 0 2%;
   font-size: 30px;
   border-color: black;
 }
@@ -237,44 +259,143 @@ h5{
 .V4{flex: 20%}
 .V5{flex: 20%}
 
+
+.h3_c, .conn {text-align: center;}
+#contact input[type="text"], 
+#contact input[type="email"], #contact input[type="tel"],
+ #contact textarea, #contact button[type="submit"]
+ { font:400 17px/16px "Times" sans-serif; }
+  
+
+.contact >#contact {
+  font-family: Times;
+  max-width: 50%;
+  background:#F2CDA2;
+  padding:16px;
+  margin: auto;
+  margin-top: 37px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-color: white;
+  border-width: 2pt;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  max-width: 100%;
+  padding: 0;
+  width: 95%;
+}
+
+#contact h3 {
+  color: black;
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+#contact h4 {
+  margin:auto;
+  display:block;
+  font-size:17px;
+padding-bottom: 10px;}
+
+
+#contact input[type="text"], #contact input[type="email"], 
+#contact input[type="tel"],  #contact textarea {
+  width:100%;
+  border:2px solid #CCC;
+  background:#FFF;
+  margin:0 0 5px;
+  padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, 
+#contact input[type="tel"]:hover, #contact input[type="url"]:hover, 
+#contact textarea:hover {
+  -webkit-transition:border-color 0.2s ease-in-out;
+  -o-transition:border-color 0.2s ease-in-out ;
+  -moz-transition:border-color 0.2s ease-in-out;
+  transition:border-color 0.2s ease-in-out;
+  border:1px solid #404040;
+}
+
+#contact textarea {
+  height:100px;
+  max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+  cursor:pointer;
+  text-align: center;
+  width:50%;
+  border:none;
+  background:#D4BBDD;
+  color:white;
+  margin:0 0 1% 3% ;
+  padding:2%;
+  font-size:1em;
+}
+
+#contact button[type="submit"]:hover {
+  background:#09C;
+  -webkit-transition:background 0.2s ease-in-out;
+  -moz-transition:background 0.2s ease-in-out;
+  -o-transition:border-color 0.2s ease-in-out ;
+  transition:background-color 0.2s ease-in-out;
+}
+
+#contact button[type="submit"]:active { 
+  box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+#contact input:focus, #contact textarea:focus {
+  outline:0;
+  border:3px solid #262626;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+hr{
+  margin-bottom: 1%;
+}
+.hobbies{
+  text-align: center;
+  font-size: 1.2em;
+}
+.hobbies >ul> li{list-style-type:none;}
+
+
 /* FOOTER */
-footer {
+#footer {
   position: sticky;
   top: 100vh;
-  height: 20vh;
   display: grid;
-  grid-template-columns: 50px 50px 50px auto;
+  grid-template-columns: auto auto auto ;
+  gap: 2%;
+  color: white;
+  background-color: #D0AB99;
+  padding: 1% 5% 1% 5%;
 
-  color: white;
-  background-color: yellow;
 }
-.social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#footer > div {
+  text-align: center; height: 10%}
+#footer > div > a> img{ max-width: 17%;
 }
-.follow {
-  margin-top: 10px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
-}
-.fb {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-.insta {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-.git {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-footer a {
-  color: white;
-}
+.f1>a>img {float: right; margin-right: -25%;}
+.f3>a>img {float: left; margin-left: -25%;}
+
 /*******************************/
 
 

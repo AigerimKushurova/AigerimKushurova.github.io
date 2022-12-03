@@ -4,36 +4,59 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listeners</title>
+    <title>Contacts</title>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
-    <nav id="nav"></nav>
+        <nav id="nav">
+    <div id="mymenu">
+      <ul style="text-align:center">
+      <li id="home" ><a href="../index.html">Home</a></li>
+     <li id="nes"><a href="about.html">About me</a></li>
+     <li id="contact"><a href="contacts.html">Contact me</a></li>
+</ul><hr>  </div>
+    </nav>
 
     <main id="contacts">
-      <h1 id="title">Contacts</h1>
+    
 
-      <p id="text3">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-        obcaecati, soluta repellat esse maiores tenetur in itaque minima sit
-        totam id quod excepturi asperiores recusandae eligendi laboriosam
-        voluptatum atque aperiam?
-      </p>
-
-      <p id="text4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-        esse dicta minus eos praesentium molestiae nostrum nulla fugit quaerat
-        placeat. Praesentium harum officia rem quam porro beatae dolorum
-        inventore delectus?
-      </p>
-
-      <label for="caps">NAME</label>
-      <input type="text" id="caps" />
     </main>
+<h3 class=h3_c><b>Contact me</b></h3>
+<div class=conn>+7(708)-864-83-74 <br>aigerim.kushurova@mail.ru</div>
+
+<div class="contact">  <p class="one">
+  <form id="contact" action="" method="post"><div class="bord">
+    
+    <h4>Feel free to contact me using this form!</h4>
+    <p style="font-size: 15px; margin-bottom: 15px"> You may leave a reply below. I will answer as soon as possible!</p>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Please, write Your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+    <marquee behavior="alternate" style="font-size:14px ;color:#595959"direction="right">(Please fill each blank to submit the message)</marquee>
+  </div></form>
+ </div>
+
 
     <!-- FOOTER -->
-    <footer id="footer"></footer>
+   <footer id="footer">
+      <div class="f1"><a href="https://www.instagram.com/_kushurova/"><img src="../images/insta.png"></a></div>
+      <div class="f2"><a href="https://t.me/gera_dott"><img src="../images/telegram.png"></a></div>
+      <div class="f3"><a href="https://github.com/AigerimKushurova"><img src="../images/github.png"></a></div>
+</footer>
 
     <script src="../main.js"></script>
+
   </body>
 </html>
