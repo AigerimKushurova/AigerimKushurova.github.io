@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head id="webhead">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacts</title>
     <link rel="stylesheet" href="../styles.css" />
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('hUpMIdz5gzG7oAxpk');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact').addEventListener('submit', function(event) {
+                event.preventDefault();
+               
+                this.contact_number.value = Math.random() * 100000 | 0;
+               
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+
   </head>
   <body>
-        <nav id="nav">
+
+    <nav id="nav">
+ 
     <div id="mymenu">
-      <ul style="text-align:center">
-      <li id="home" ><a href="../index.html">Home</a></li>
-     <li id="nes"><a href="about.html">About me</a></li>
-     <li id="contact"><a href="contacts.html">Contact me</a></li>
-</ul><hr>  </div>
+      <ul class=ul_menu>
+        <li id="home" ><a href="../index.html">Home</a></li>
+        <li id="nes"><a href="about.html">About me</a></li>
+        <li id="contact"><a href="contacts.html">Contact me</a></li>
+      </ul><hr style="margin-bottom: 1%">  
+    </div>
     </nav>
+
+
 
     <main id="contacts">
     
 
     </main>
-<h3 class=h3_c><b>Contact me</b></h3>
-<div class=conn>+7(708)-864-83-74 <br>aigerim.kushurova@mail.ru</div>
+<h3 class="h3_c" id ="h_op"><b>Contact me</b></h3>
+<div class="conn">+7(708)-864-83-74 <br>aigerim.kushurova@mail.ru</div>
 
 <div class="contact">  <p class="one">
   <form id="contact" action="" method="post"><div class="bord">
     
     <h4>Feel free to contact me using this form!</h4>
-    <p style="font-size: 15px; margin-bottom: 15px"> You may leave a reply below. I will answer as soon as possible!</p>
+    <p style="font-size: 1.1em; margin-bottom: 1%"> You may leave a reply below. I will answer as soon as possible!</p>
+    <input type="hidden" name="contact_number">
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input name="user_name" placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input name="user_email" placeholder="Your Email Address" type="email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+      <input name="user_number" placeholder="Your Phone Number" type="tel" tabindex="3" required>
     </fieldset>
     <fieldset>
       <textarea placeholder="Please, write Your message here...." tabindex="5" required></textarea>
@@ -44,10 +76,15 @@
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
-    <marquee behavior="alternate" style="font-size:14px ;color:#595959"direction="right">(Please fill each blank to submit the message)</marquee>
+    <marquee behavior="scroll" direction="right">(Please fill each blank to submit the message)</marquee>
   </div></form>
  </div>
-
+<div class="form_backup"><p>In case the form above does not work, please use the following mailing method:</p>
+<form action="mailto:aigerim.kushurova@mail.ru" method="post" enctype="text/plain" >
+FirstName:<input type="text" name="FirstName">
+Email:<input type="text" name="Email">
+<input type="submit" name="submit" value="Submit" class="sum">
+</form></div>
 
     <!-- FOOTER -->
    <footer id="footer">
@@ -57,6 +94,7 @@
 </footer>
 
     <script src="../main.js"></script>
+
 
   </body>
 </html>
